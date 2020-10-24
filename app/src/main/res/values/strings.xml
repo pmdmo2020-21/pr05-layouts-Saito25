@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Layouts</string>
+    <string name="iv_main_header">Imagen de Bella, de Bella y Bestia, de la película de Disney</string>
+    <string name="txt_main_title">Beaty and the Best</string>
+    <string name="txt_main_subtitle">March 2017 PG 129 minutes</string>
+    <string name="iv_main_header_mark">Icono de acceso rápido para guardar el artículo en favoritos</string>
+    <string name="btn_main_rent">Rent for 9,99 €</string>
+    <string name="btn_main_buy">Buy for 29,99 €</string>
+    <string name="txt_main_edit">242 Ratings</string>
+    <string name="txt_btn_family">Family</string>
+    <string name="txt_main_tomate">71 %</string>
+    <string name="txt_main_slider">Similar</string>
+    <string name="txt_main_product_description">Los personajes más queridos del clásico de Disney La Bella y la Bestia cobran vida en la adaptación de acción real.</string>
 </resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivMainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/margin_2x"
+        android:contentDescription="@string/iv_main_header"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header" />
+
+    <TextView
+        android:id="@+id/txtMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMainHeader"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/txt_main_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <ImageView
+        android:id="@+id/ivMainHeaderMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMainHeader"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:contentDescription="@string/iv_main_header_mark"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_bookmark" />
+
+    <TextView
+        android:id="@+id/txtMainSubitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMainTitle"
+        android:layout_alignStart="@+id/txtMainTitle"
+        android:layout_marginBottom="@dimen/margin_2x"
+        android:text="@string/txt_main_subtitle" />
+
+    <Button
+        android:id="@+id/btnMainRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMainSubitle"
+        android:layout_alignStart="@+id/txtMainTitle"
+        android:layout_toStartOf="@+id/vMainBetweenButtons"
+        android:text="@string/btn_main_rent" />
+
+    <View
+        android:id="@+id/vMainBetweenButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignBaseline="@+id/btnMainBuy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/margin" />
+
+    <Button
+        android:id="@+id/btnMainBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnMainRent"
+        android:layout_alignEnd="@+id/ivMainHeaderMark"
+        android:layout_toEndOf="@+id/vMainBetweenButtons"
+        android:text="@string/btn_main_buy" />
+
+    <View
+        android:id="@+id/hrPreButtons"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/btnMainRent"
+        android:layout_alignStart="@+id/btnMainRent"
+        android:layout_alignEnd="@+id/btnMainBuy"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin_2x"
+        android:background="@color/gray_divider" />
+
+    <View
+        android:id="@+id/vMainFirstSeparator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_alignStart="@id/hrPreButtons"
+        android:layout_marginEnd="@dimen/margin" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMainEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_toEndOf="@+id/vMainFirstSeparator"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtMainEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fabMainEdit"
+        android:layout_alignStart="@id/vMainFirstSeparator"
+        android:layout_alignEnd="@id/vMainSecondSeparator"
+        android:gravity="center"
+        android:text="@string/txt_main_edit" />
+
+    <View
+        android:id="@+id/vMainSecondSeparator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:layout_toEndOf="@id/fabMainEdit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMainFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hrPreButtons"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_toStartOf="@+id/vMainThirdSeparator"
+        android:src="@drawable/ic_family"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtMainFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fabMainFamily"
+        android:layout_alignStart="@+id/vMainSecondSeparator"
+        android:layout_alignEnd="@+id/vMainThirdSeparator"
+        android:gravity="center"
+        android:text="@string/txt_btn_family" />
+
+    <View
+        android:id="@+id/vMainThirdSeparator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/margin" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMainTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_toEndOf="@+id/vMainThirdSeparator"
+        android:src="@drawable/tomato"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtMainTomate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fabMainTomato"
+        android:layout_alignStart="@+id/vMainThirdSeparator"
+        android:layout_alignEnd="@id/vMainFourthSeparator"
+        android:gravity="center"
+        android:text="@string/txt_main_tomate" />
+
+    <View
+        android:id="@+id/vMainFourthSeparator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:layout_toEndOf="@id/fabMainTomato" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMainSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_toStartOf="@+id/vMainFifthSeparator"
+        android:src="@drawable/ic_similar"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtMainSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fabMainSlider"
+        android:layout_alignStart="@+id/vMainFourthSeparator"
+        android:layout_alignEnd="@+id/vMainFifthSeparator"
+        android:gravity="center"
+        android:text="@string/txt_main_slider" />
+
+    <View
+        android:id="@+id/vMainFifthSeparator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/hrPreButtons"
+        android:layout_alignEnd="@id/btnMainBuy"
+        android:layout_marginStart="@dimen/margin" />
+
+    <View
+        android:id="@+id/hrPostButtons"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignStart="@+id/hrPreButtons"
+        android:layout_alignEnd="@+id/hrPreButtons"
+        android:layout_below="@+id/txtMainSlider"
+        android:layout_marginVertical="@dimen/margin_2x"
+        android:background="@color/gray_divider" />
+
+    <TextView
+        android:id="@+id/txtMainDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hrPreButtons"
+        android:layout_alignEnd="@+id/hrPreButtons"
+        android:layout_below="@id/hrPostButtons"
+        android:text="@string/txt_main_product_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+</RelativeLayout>

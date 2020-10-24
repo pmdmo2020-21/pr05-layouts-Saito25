@@ -7,17 +7,194 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:tint="@color/white" />
-
-    <!-- ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL -->
-    <View
+    <ImageView
+        android:id="@+id/ivMainHeader"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/gray_divider" />
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/iv_main_header"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header" />
 
+    <LinearLayout
+        android:id="@+id/llMainTitleAndMark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_2x"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMainTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtMainTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_weight="1"
+                android:text="@string/txt_main_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <ImageView
+                android:id="@+id/ivMainHeaderMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/iv_main_header_mark"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_bookmark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMainSubitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_2x"
+            android:text="@string/txt_main_subtitle" />
+
+        <LinearLayout
+            android:id="@+id/llMainButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_2x"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMainRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_weight="1"
+                android:text="@string/btn_main_rent" />
+
+            <Button
+                android:id="@+id/btnMainBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_weight="1"
+                android:text="@string/btn_main_buy" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hrPreButtons"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_divider" />
+
+        <LinearLayout
+            android:id="@+id/llMainFloatingButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llMainEditButtonAndTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_2x"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtMainEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_main_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMainFamilyButtonAndTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_2x"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:src="@drawable/ic_family"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtMainFamily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_btn_family" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMainTomateButtonAndTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_2x"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:src="@drawable/tomato"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtMainTomate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_main_tomate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMainSliderButtonAndTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_2x"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:src="@drawable/ic_similar"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtMainSlider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_main_slider" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hrPostButtons"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="@dimen/margin_2x"
+            android:background="@color/gray_divider" />
+
+        <TextView
+            android:id="@+id/txtMainDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_main_product_description"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </LinearLayout>
 </LinearLayout>
